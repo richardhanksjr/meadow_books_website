@@ -1,0 +1,195 @@
+<!--{% extends 'bootstrap3/bootstrap3.html' %}-->
+<!DOCTYPE html>
+<html >
+	{% load bootstrap3 %}
+	<!--{% load bootstrap_themes %}-->
+	<!--{% bootstrap_styles theme='simplex' type='min.css' %}-->
+	{% load staticfiles %}
+	{% static 'style.css' %}
+	{% block bootstrap3_extra_head %}
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300/700" rel="stylesheet" type="text/css">
+		<link href="{% static 'products/style.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'products/style.css' %}" rel="stylesheet" type="text/css">
+
+	{% endblock %}
+
+	{% block bootstrap3_title %}
+		Music in the Meadow Books
+	{% endblock %}
+	{% block bootstrap3_content %}
+	<nav class="navbar navbar-inverse navbar-fixed-top animate">
+			<div class="container navbar-more visible-xs">
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search for...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit">Submit</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="container" >
+				<div class="navbar-header hidden-xs">
+					<img src="{% static 'images/MusicInTheMeadowLogoRound.jpg' %}"<a class="navbar-brand" href="/">Brand</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right mobile-bar">
+					<li>
+						<a href="{% url 'home' %}">
+							<span class="menu-icon fa fa-home"></span>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'all_blogs' %}">
+							<span class="menu-icon fa fa-info"></span>
+							<span class="hidden-xs">Blogs</span>
+							<span class="visible-xs">Blog</span>
+						</a>
+					</li>
+					<li class="hidden-xs">
+						<a href="#">
+							<span class="menu-icon fa fa-picture-o"></span>
+							Photos
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-ship"></span>
+							Cruises
+						</a>
+					</li>
+					<li class="hidden-xs">
+						<a href="#">
+							<span class="menu-icon fa fa-bell-o"></span>
+							Reservations
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon fa fa-phone"></span>
+							<span class="hidden-xs">Contact Us</span>
+							<span class="visible-xs">Contact</span>
+						</a>
+					</li>
+					<li class="visible-xs">
+						<a href="#navbar-more-show">
+							<span class="menu-icon fa fa-bars"></span>
+							More
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	<br>
+	<br>
+
+	<div class="full">
+	<main >
+		<!--<img src = '{% static "blog/background_rooster.JPG" %}'>-->
+		<div >
+			{% block content %}
+				No content to display
+			{% endblock %}
+		</div>
+		</main>
+
+	<h4 class = 'text-center footer' link="black">
+		<p>Music in the Meadow Books</p>
+		<hr>
+		<p class="footer_link"><a href="http://www.richardhanks.me">Website by Richard Hanks</a></p>
+
+	</h4>
+	</div>
+	{% endblock %}
+</html>
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% static 'blog/style.css' %}>
+{% block content %}
+
+    {% for blog in blogs %}
+        blog.title
+    {% endfor %}
+    <div class ="full">
+    <div class="container">
+        <div>This is a test</div>
+    </div>
+        <br>
+        <br>
+        <br>
+    <!--<img src = '{% static "blog/background_rooster.JPG" %}'>-->
+    </div>
+{% endblock %}
