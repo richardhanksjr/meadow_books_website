@@ -19,12 +19,14 @@ from products import urls as products_urls
 from blog import urls as blog_urls
 from django.conf.urls.static import static
 from django.conf import settings
+from . import views
 # from blog import urls as blog_urls
 
 urlpatterns = [
     url(r'^', include(products_urls)),
     url(r'^blog/', include(blog_urls)),
     url(r'^admin/', admin.site.urls),
+    url(r'^/about-us', views.about_us)
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

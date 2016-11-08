@@ -29,33 +29,35 @@
     <!--{% endfor %}-->
 <!--</div>-->
  <div id="products" class="row list-group text-center">
-     <br>
-     <br>
-     <br>
-     <br>
+
+
 {% for product in products %}
-        <div class="item  col-xs-4 col-md-6 col-lg-4 text-center">
-            <div class="thumbnail">
+
+
+        <div class="col-xs-4 col-md-4 col-lg-6">
+
+                 <a href="{{product.get_absolute_url}}"><img class="group list-group-image" src="{{ product.image.url }}" alt=""  style="max-height:400px;"/></a>
                 <!--<img class="group list-group-image" src="{{product.image.url}}" width="250x" height="400px" alt="" />-->
-                <a class='product_picture' href="{{product.get_absolute_url}}"><img class="group list-group-image" src="{{ product.image.url }}" alt=""  style="max-height:200px;"/></a>
-                <div class="caption">
+            <div class="thumbnail">
+            <div class="caption">
                     <h4 class="group inner list-group-item-heading">
-                        {{product.title|truncatechars:30}}</h4>
+                        {{product.title}}</h4>
 
                     <p class="group inner list-group-item-text">
-                        {{product.description|truncatechars:150}}</p>
+                        {{product.description|truncatechars:300}}</p>
                     <div class="row">
                         <!--<div class="col-xs-12 col-md-6">-->
                             <!--<p class="lead">-->
                                 <!--{{product.price}}</p>-->
                         <!--</div>-->
-                        <div class="col-xs-12 col-md-6 pull-right">
+                        <div class="col-xs-12 col-md-4 col-lg-6">
                             <a class="btn btn-success" href="{{product.tpt_url}}">Purchase</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
  {% endfor %}
   </div>
 {% endblock %}

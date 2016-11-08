@@ -1,17 +1,27 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+.bg{
 
-html, body {
-    height: 100%;
-        background-color: black;
-    background: url('background_rooster.JPG') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+      position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('background_rooster.JPG');
+
+    background-size: 98% 98%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+
 }
 body {
     padding-top: 75px;
     padding-bottom: 70px;
+    opacity: 1;
+    z-index:9999;
+    background-color: black;
 }
 body.navbar-more-show  {
 	overflow: hidden;
@@ -140,18 +150,19 @@ a:hover
 .glyphicon { margin-right:5px; }
 .thumbnail
 {
-    margin-bottom: 20px;
+    margin: 20px;
+    margin-top: 5px;
     padding: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 20px;
+    background-color: #ffffcc;
 }
 
 .item{
     margin-left:20px;
-    outline: 10px solid orange;
-    padding: 0px;
-    margin-right: 20px;
+    opacity: 1;
+
 }
 .item.list-group-item
 {
@@ -212,10 +223,14 @@ color: white;
 }
 
 .footer_link{
-color:white;
-text_decoration:overline;
+position: relative;
+magin-top: -20px;
+z-index: 2;
+opacity: 1;
+
 }
 
 .product_picture{
     padding:20px;
+    opacity: 1;
 }

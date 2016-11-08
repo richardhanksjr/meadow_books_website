@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.urls import reverse
 # from products.models import Tag
 
 
@@ -23,6 +24,6 @@ class Blog(models.Model):
     def __unicode__(self):
         return self.title
 
-
-
+    def get_absolute_url(self):
+        return reverse('blog_detail', kwargs={'slug': self.slug})
 

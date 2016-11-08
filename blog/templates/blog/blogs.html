@@ -1,18 +1,35 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
-{% static 'blog/style.css' %}>
-{% block content %}
 
-    {% for blog in blogs %}
-        blog.title
-    {% endfor %}
-    <div class ="full">
-    <div class="container">
-        <div>This is a test</div>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% static 'products/style.css' %}
+{% block title %}
+    {{block.super}}-Products
+{% endblock %}
+{% block content %}
+ <div id="blogs" class="row list-group text-center">
+
+
+{% for blog in blogs %}
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <a href="{{ blog.get_absolute_url }}">
+            <div class="thumbnail">
+            <div class="caption">
+                    <h2 class="group inner list-group-item-heading">
+                        {{blog.title}}</h2>
+                    <br>
+                    <p class="group inner list-group-item-text">
+                        {{blog.body|truncatechars:1000}}</p>
+
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-md-3"></div>
     </div>
-        <br>
-        <br>
-        <br>
-    <!--<img src = '{% static "blog/background_rooster.JPG" %}'>-->
-    </div>
+ {% endfor %}
+  </div>
 {% endblock %}

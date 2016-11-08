@@ -17,6 +17,8 @@
 		Music in the Meadow Books
 	{% endblock %}
 	{% block bootstrap3_content %}
+	<div class="mainDiv">
+	<div class="bg">
 	<nav class="navbar navbar-inverse navbar-fixed-top animate">
 			<div class="container navbar-more visible-xs">
 				<form class="navbar-form navbar-left" role="search">
@@ -140,31 +142,21 @@
 							<span class="visible-xs">Blog</span>
 						</a>
 					</li>
-					<li class="hidden-xs">
-						<a href="#">
-							<span class="menu-icon fa fa-picture-o"></span>
-							Photos
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="menu-icon fa fa-ship"></span>
-							Cruises
-						</a>
-					</li>
-					<li class="hidden-xs">
-						<a href="#">
-							<span class="menu-icon fa fa-bell-o"></span>
-							Reservations
+									<li>
+						<a href="/about-us">
+							<span class="menu-icon fa fa-phone"></span>
+							<span class="hidden-xs">About Us</span>
+							<span class="visible-xs">About</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<span class="menu-icon fa fa-phone"></span>
-							<span class="hidden-xs">Contact Us</span>
+							<span class="hidden-xs">Contact</span>
 							<span class="visible-xs">Contact</span>
 						</a>
 					</li>
+
 					<li class="visible-xs">
 						<a href="#navbar-more-show">
 							<span class="menu-icon fa fa-bars"></span>
@@ -172,13 +164,15 @@
 						</a>
 					</li>
 				</ul>
-			</div>
+
 		</nav>
 	<br>
 	<br>
 
 	<div class="full">
 	<main >
+		<br>
+		<br>
 		<!--<img src = '{% static "blog/background_rooster.JPG" %}'>-->
 		<div >
 			{% block content %}
@@ -186,15 +180,17 @@
 			{% endblock %}
 		</div>
 		</main>
+	<div class = 'row text-center'>
+		<h4 class = 'text-center footer text-center' link="black">
 
-	<h4 class = 'text-center footer' link="black">
-		<p>Music in the Meadow Books</p>
-		<hr>
-		<p class="footer_link"><a href="http://www.richardhanks.me">Website by Richard Hanks</a></p>
+			<p class="footer_link"><a href="http://www.richardhanks.me"><img src="{% static 'products/footer_image_ornate.png' %}" style="max-height:200px;"</a></p>
 
-	</h4>
+		</h4>
+	</div>
+	</div>
+			</div>
+	</div>
 	</div>
 	{% endblock %}
+
 </html>
-<!--</body>-->
-<!--</html>-->
